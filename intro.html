@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Ashish Iot|Webdev</title>
+    <link rel="icon" href="ASH.png" type="image/x-icon">
+ 
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Introduction</a>
+            </div>
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#"  class="active" style="--navAni:1">Home</a></li>
+                <li><a href="#" style="--navAni:2">About</a></li>
+                <li><a href="#" style="--navAni:3">Skills</a></li>
+                <li><a href="#" style="--navAni:4">Portfolio</a></li>
+                <li><a href="#" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="detail">
+                <h3>Hi, It's Me</h3>
+                <h1>I'm <span style="color:#f9532d;">Ashish Simon Mathew</span></h1>
+                <p>Hello, I'm Ashish Simon Mathew, currently pursuing my studies at St. Thomas Institute of Science and Technology in Trivandrum. My passion lies at the crossroads of two exciting realms: IoT (Internet of Things) and web development.
+                    In the world of IoT, I excel in crafting innovative solutions by designing and implementing interconnected systems. I specialize in sensor integration for data collection,and ensuring seamless management for efficient and impactful solutions.
+                    Simultaneously, I have a strong foundation in web development, proficient in front-end technologies such as HTML, CSS, and JavaScript.
+                    Beyond my technical expertise, I find joy in playing keyboard, basketball, and badminton. I'm also an avid enthusiast of anime and enjoy diving into the captivating worlds depicted in novels.
+                    Proficient in languages like English, Hindi, and Malayalam, I aim to continuously expand my skills in both IoT and web development, aspiring to contribute significantly to these dynamic fields.
+                </p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/ashish-simon-mathew-83a335282/" target="_blank" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://instagram.com/luffyx7_?igshid=M2RkZGJiMzhjOQ==" target="_blank" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/ashixhx" target="_blank" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+                    
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="img.svg" alt="" class="img-w">
+                </div> 
+            </div>
+        </div>
+    </section>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
